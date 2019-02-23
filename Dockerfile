@@ -14,3 +14,5 @@ RUN apk update && \
 RUN django-admin startproject server
 
 COPY uwsgi.ini /uwsgi.ini
+
+CMD [ "/usr/bin/uwsgi", "--ini", "/uwsgi.ini" ]
